@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Lizard Spock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="start-page" class="page">
+        <h1>Let's Start the Game</h1>
+        <input type="text" id="username" placeholder="Enter your name"><br>
+        <select id="game-mode">
+            <option value="rps">Rock Paper Scissors</option>
+            <option value="rpsls">Rock Paper Scissors Lizard Spock</option>
+        </select><br>
+        <button id="start-button">Get Started</button>
+    </div>
+    <div id="game-page" class="page" style="display: none;">
+        <h1 id="game-title">Rock Paper Scissors</h1>
+        <div class="score-board">
+            <div id="user-label" class="badge">User: </div>
+            <span id="user-score">0</span>
+            <div id="computer-label" class="badge">Comp: </div>
+            <span id="computer-score">0</span>
+        </div>
+        <div class="result">
+            <p id="result">Make your move!</p>
+        </div>
+        <div class="hands">
+            <div class="hand" id="computer-hand">
+                <img id="computer-image" src="images/rock.png" alt="Computer Hand">
+            </div>
+            <div class="hand" id="user-hand">
+                <img id="user-image" src="images/rock.png" alt="User Hand">
+            </div>
+        </div>
+        <div class="choices">
+            <div class="choice" id="rock"><img src="images/rock.png" alt="Rock"></div>
+            <div class="choice" id="paper"><img src="images/paper.png" alt="Paper"></div>
+            <div class="choice" id="scissors"><img src="images/scissors.png" alt="Scissors"></div>
+            <div class="choice rpsls-only" id="lizard"><img src="images/lizard.png" alt="Lizard"></div>
+            <div class="choice rpsls-only" id="spock"><img src="images/spock.png" alt="Spock"></div>
+        </div>
+        <button id="end-button">End Game</button>
+        <div id="history">
+            <h2>Game History</h2>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+    <div id="score-page" class="page" style="display: none;">
+        <h1>Final Score</h1>
+        <p id="final-score"></p>
+        <button id="restart-button">Play Again</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
